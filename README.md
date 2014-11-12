@@ -14,30 +14,17 @@ iOS_Fonts
 //    遍历所有字体。这是已经把新字体添加进去了
 
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
-    
     NSArray *fontNames;
-    
     NSInteger indFamily, indFont;
-    
     for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
-    
     {
-    
         NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
-        
         fontNames = [[NSArray alloc] initWithArray:
-        
                      [UIFont fontNamesForFamilyName:
-                     
                       [familyNames objectAtIndex:indFamily]]];
-                      
         for (indFont=0; indFont<[fontNames count]; ++indFont)
-        
         {
-        
-            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
-            
+            NSLog(@"Font name: %@", [fontNames objectAtIndex:indFont]);
         }
-        
     }
     
