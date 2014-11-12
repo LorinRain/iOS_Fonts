@@ -12,17 +12,32 @@ iOS_Fonts
 （注意：这里的字体名字为familyName,不是文件名）通过遍历字体，可以得到所添加字体的familyName，应该是在数组的最后面。
 
 //    遍历所有字体。这是已经把新字体添加进去了
+
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
+    
     NSArray *fontNames;
+    
     NSInteger indFamily, indFont;
+    
     for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
+    
     {
+    
         NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
+        
         fontNames = [[NSArray alloc] initWithArray:
+        
                      [UIFont fontNamesForFamilyName:
+                     
                       [familyNames objectAtIndex:indFamily]]];
+                      
         for (indFont=0; indFont<[fontNames count]; ++indFont)
+        
         {
+        
             NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
+            
         }
+        
     }
+    
